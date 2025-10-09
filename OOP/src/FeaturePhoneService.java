@@ -19,7 +19,7 @@ public class FeaturePhoneService {
                 System.out.print("Invalid or duplicate ID. Enter a valid Feature Phone ID: ");
                 idOfPhone = scanner.nextInt();
             }
-            featurePhone.setFeaturePhoneID(idOfPhone);
+            featurePhone.setId(idOfPhone);
             scanner.nextLine();
 
             System.out.print("Enter battery life in hours (e.g., 48): ");
@@ -87,7 +87,7 @@ public class FeaturePhoneService {
             System.out.println("Invalid ID");
         }
         if(checkIfFeaturePhoneIdExists(userInput)){
-            featurePhoneList.removeIf(phone -> phone.getFeaturePhoneID().equals(userInput));
+            featurePhoneList.removeIf(phone -> phone.getId().equals(userInput));
             System.out.println("Feature Phone with ID " + userInput + " has been removed.\n");
         }
         else {
@@ -110,7 +110,7 @@ public class FeaturePhoneService {
 
     public static boolean checkIfFeaturePhoneIdExists(int idToCheck) {
         for (FeaturePhone featurePhone : featurePhoneList) {
-            if (featurePhone.getFeaturePhoneID().equals(idToCheck)) {
+            if (featurePhone.getId().equals(idToCheck)) {
                 return true;
             }
         }

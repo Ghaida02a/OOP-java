@@ -1,15 +1,6 @@
 public class GamingPhone extends Phone {
-    private Integer gamingPhoneID;
     private String gpu;
     private Integer screenRefreshRate;
-
-    public Integer getGamingPhoneID() {
-        return gamingPhoneID;
-    }
-
-    public void setGamingPhoneID(Integer gamingPhoneID) {
-        this.gamingPhoneID = gamingPhoneID;
-    }
 
     public String getGpu() {
         return gpu;

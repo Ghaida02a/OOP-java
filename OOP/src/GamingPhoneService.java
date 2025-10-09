@@ -19,7 +19,7 @@ public class GamingPhoneService {
                 System.out.print("Invalid or duplicate ID. Enter a valid Gaming Phone ID: ");
                 idOfPhone = scanner.nextInt();
             }
-            gamingPhone.setGamingPhoneID(idOfPhone);
+            gamingPhone.setId(idOfPhone);
             scanner.nextLine(); // consume newline
 
             //Enter GPU
@@ -103,7 +103,7 @@ public class GamingPhoneService {
             System.out.println("Invalid ID");
         }
         if(checkIfGamingPhoneIdExists(userInput)){
-            gamingPhoneList.removeIf(phone -> phone.getGamingPhoneID().equals(userInput));
+            gamingPhoneList.removeIf(phone -> phone.getId().equals(userInput));
             System.out.println("Gaming Phone with ID " + userInput + " has been removed.\n");
         }
         else {
@@ -126,7 +126,7 @@ public class GamingPhoneService {
 
     public static boolean checkIfGamingPhoneIdExists(int idToCheck) {
         for (GamingPhone gamingPhone : gamingPhoneList) {
-            if (gamingPhone.getGamingPhoneID().equals(idToCheck)) {
+            if (gamingPhone.getId().equals(idToCheck)) {
                 return true;
             }
         }

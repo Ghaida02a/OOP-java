@@ -20,7 +20,7 @@ public class SmartPhoneService {
                 System.out.print("Invalid or duplicate ID. Enter a valid Smart Phone ID: ");
                 idOfPhone = scanner.nextInt();
             }
-            smartPhone.setSmartPhoneId(idOfPhone);
+            smartPhone.setId(idOfPhone);
             scanner.nextLine();
 
             System.out.println("Enter the Operating System name: ");
@@ -100,7 +100,7 @@ public class SmartPhoneService {
             System.out.println("Invalid ID");
         }
         if(checkIfSmartPhoneIdExists(userInput)){
-            smartPhoneList.removeIf(phone -> phone.getSmartPhoneId().equals(userInput));
+            smartPhoneList.removeIf(phone -> phone.getId().equals(userInput));
             System.out.println("Smart Phone with ID " + userInput + " has been removed.\n");
         }
         else {
@@ -123,7 +123,7 @@ public class SmartPhoneService {
 
     public static boolean checkIfSmartPhoneIdExists(int idToCheck) {
         for (SmartPhone smartPhone : smartPhoneList) {
-            if (smartPhone.getSmartPhoneId().equals(idToCheck)) {
+            if (smartPhone.getId().equals(idToCheck)) {
                 return true;
             }
         }
