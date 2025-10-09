@@ -1,12 +1,21 @@
 public class GamingPhone {
-    private Integer gpu;
+    private Integer gamingPhoneID;
+    private String gpu;
     private Integer screenRefreshRate;
 
-    public Integer getGpu() {
+    public Integer getGamingPhoneID() {
+        return gamingPhoneID;
+    }
+
+    public void setGamingPhoneID(Integer gamingPhoneID) {
+        this.gamingPhoneID = gamingPhoneID;
+    }
+
+    public String getGpu() {
         return gpu;
     }
 
-    public void setGpu(Integer gpu) {
+    public void setGpu(String gpu) {
         this.gpu = gpu;
     }
 

@@ -1,6 +1,15 @@
 public class SmartPhone {
+    private Integer smartPhoneId;
     private String operatingSystem;
     private boolean bluetoothAvailable;
+
+    public Integer getSmartPhoneId() {
+        return smartPhoneId;
+    }
+
+    public void setSmartPhoneId(Integer smartPhoneId) {
+        this.smartPhoneId = smartPhoneId;
+    }
 
     public String getOperatingSystem() {
         return operatingSystem;
