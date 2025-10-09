@@ -6,6 +6,9 @@ public class Phone {
     private double price;
     private String color;
     private Integer quantity;
+    private String createdDate;
+    private String updatedDate;
+    private Integer batteryLife; // in hours
 
     public int getId() {
         return id;
@@ -57,5 +60,29 @@ public class Phone {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public String getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(String createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public String getUpdatedDate() {
+        return updatedDate;
+    }
+
+    public void setUpdatedDate(String updatedDate) {
+        this.updatedDate = updatedDate;
+    }
+
+    public Integer getBatteryLife() {
+        return batteryLife;
+    }
+
+    public void setBatteryLife(Integer batteryLife) {
+        this.batteryLife = batteryLife;
     }
 }

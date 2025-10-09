@@ -1,4 +1,4 @@
-public class SmartPhone {
+public class SmartPhone extends Phone {
     private Integer smartPhoneId;
     private String operatingSystem;
     private boolean bluetoothAvailable;

@@ -1,4 +1,4 @@
-public class GamingPhone {
+public class GamingPhone extends Phone {
     private Integer gamingPhoneID;
     private String gpu;
     private Integer screenRefreshRate;

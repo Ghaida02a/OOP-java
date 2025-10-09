@@ -1,4 +1,4 @@
-public class FeaturePhone {
+public class FeaturePhone extends Phone {
     private Integer featurePhoneID;
     private Integer batteryLife;
 
