@@ -1,3 +1,5 @@
+package Entity;
+
 public class FeaturePhone extends Phone {
     private Integer batteryLife;
 

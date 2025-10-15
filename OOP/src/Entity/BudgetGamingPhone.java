@@ -1,7 +1,9 @@
+package Entity;
+
 public class BudgetGamingPhone extends GamingPhone {
     private float processorClockSpeed;
     private int ramSize; //GB
-    private boolean gameBoosterSoftware;
+    private String gameBoosterSoftware;
 
     public float getProcessorClockSpeed() {
         return processorClockSpeed;
@@ -19,11 +21,11 @@ public class BudgetGamingPhone extends GamingPhone {
         this.ramSize = ramSize;
     }
 
-    public boolean isGameBoosterSoftware() {
+    public String getGameBoosterSoftware() {
         return gameBoosterSoftware;
     }
 
-    public void setGameBoosterSoftware(boolean gameBoosterSoftware) {
+    public void setGameBoosterSoftware(String gameBoosterSoftware) {
         this.gameBoosterSoftware = gameBoosterSoftware;
     }
 }

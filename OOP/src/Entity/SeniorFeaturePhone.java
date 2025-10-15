@@ -1,7 +1,9 @@
-public class SeniorFeaturePhone extends FeaturePhone{
+package Entity;
+
+public class SeniorFeaturePhone extends FeaturePhone {
     private int largeButtonSize; //e.g., mm size.
     private boolean sosButton;
-    private int hearingAidCompatibility;
+    private boolean hearingAidCompatibility;
 
     public int getLargeButtonSize() {
         return largeButtonSize;
@@ -19,11 +21,11 @@ public class SeniorFeaturePhone extends FeaturePhone{
         this.sosButton = sosButton;
     }
 
-    public int getHearingAidCompatibility() {
+    public boolean isHearingAidCompatibility() {
         return hearingAidCompatibility;
     }
 
-    public void setHearingAidCompatibility(int hearingAidCompatibility) {
+    public void setHearingAidCompatibility(boolean hearingAidCompatibility) {
         this.hearingAidCompatibility = hearingAidCompatibility;
     }
 }

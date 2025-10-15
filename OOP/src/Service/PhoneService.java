@@ -1,4 +1,8 @@
-import java.time.LocalDateTime;
+package Service;
+
+import Entity.Phone;
+import main.PhoneDriver;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -144,7 +148,7 @@ public class PhoneService {
         }
         if(checkIfPhoneIdExists(userInput)){
             phoneList.removeIf(phone -> phone.getId() == userInput);
-            System.out.println("Phone item is removed");
+            System.out.println("Entity.Phone item is removed");
         }
         else {
             System.out.println("ID does not exist, Exiting...");
@@ -158,10 +162,10 @@ public class PhoneService {
             System.out.println("No items found.");
         } else {
             for (Phone phone : phoneList) {
-                System.out.println(" Phone name: " + phone.getName() +
+                System.out.println(" Entity.Phone name: " + phone.getName() +
                         "\n Brand name: " + phone.getBrand() +
-                        "\n Phone color: " + phone.getColor() +
-                        "\n Phone price: " + phone.getPrice() +
+                        "\n Entity.Phone color: " + phone.getColor() +
+                        "\n Entity.Phone price: " + phone.getPrice() +
                         "\n Quantity: " + phone.getQuantity() + "\n");
             }
         }

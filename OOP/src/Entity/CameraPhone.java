@@ -1,3 +1,5 @@
+package Entity;
+
 public class CameraPhone extends SmartPhone {
     private float mainSensorMegapixels; //Camera resolutions
     private float opticalZoomLevel;

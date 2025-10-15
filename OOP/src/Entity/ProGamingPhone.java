@@ -1,12 +1,14 @@
+package Entity;
+
 public class ProGamingPhone extends GamingPhone {
-    private boolean shoulderTriggers;
+    private String shoulderTriggers; //Physical or touch-sensitive buttons
     private String coolingSystemType; //"Fan", "Liquid Cooling".
 
-    public boolean isShoulderTriggers() {
+    public String getShoulderTriggers() {
         return shoulderTriggers;
     }
 
-    public void setShoulderTriggers(boolean shoulderTriggers) {
+    public void setShoulderTriggers(String shoulderTriggers) {
         this.shoulderTriggers = shoulderTriggers;
     }
 

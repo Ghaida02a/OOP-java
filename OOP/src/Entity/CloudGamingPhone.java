@@ -1,7 +1,9 @@
+package Entity;
+
 public class CloudGamingPhone extends GamingPhone {
     private String wifiStandard;
-    private String FiveGBandSupport;
-    private boolean subscriptionBundle;
+    private boolean FiveGBandSupport;
+    private String subscriptionBundle;
 
     public String getWifiStandard() {
         return wifiStandard;
@@ -11,19 +13,19 @@ public class CloudGamingPhone extends GamingPhone {
         this.wifiStandard = wifiStandard;
     }
 
-    public String getFiveGBandSupport() {
+    public boolean isFiveGBandSupport() {
         return FiveGBandSupport;
     }
 
-    public void setFiveGBandSupport(String fiveGBandSupport) {
+    public void setFiveGBandSupport(boolean fiveGBandSupport) {
         FiveGBandSupport = fiveGBandSupport;
     }
 
-    public boolean isSubscriptionBundle() {
+    public String getSubscriptionBundle() {
         return subscriptionBundle;
     }
 
-    public void setSubscriptionBundle(boolean subscriptionBundle) {
+    public void setSubscriptionBundle(String subscriptionBundle) {
         this.subscriptionBundle = subscriptionBundle;
     }
 }

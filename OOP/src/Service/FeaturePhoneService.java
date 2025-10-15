@@ -1,3 +1,7 @@
+package Service;
+
+import Entity.FeaturePhone;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,14 +13,14 @@ public class FeaturePhoneService {
     public static void addFeaturePhone() {
         FeaturePhone featurePhone = new FeaturePhone();
 
-        System.out.println("\n--- Adding a Feature Phone ---");
+        System.out.println("\n--- Adding a Feature Entity.Phone ---");
         boolean exitFlag = true;
         while (exitFlag) {
             // Enter ID of phone
-            System.out.print("Enter Feature Phone ID: ");
+            System.out.print("Enter Feature Entity.Phone ID: ");
             Integer idOfPhone = scanner.nextInt();
             while (idOfPhone < 0 || checkIfFeaturePhoneIdExists(idOfPhone)) {
-                System.out.print("Invalid or duplicate ID. Enter a valid Feature Phone ID: ");
+                System.out.print("Invalid or duplicate ID. Enter a valid Feature Entity.Phone ID: ");
                 idOfPhone = scanner.nextInt();
             }
             featurePhone.setId(idOfPhone);
@@ -31,7 +35,7 @@ public class FeaturePhoneService {
             featurePhone.setBatteryLife(batteryLifeInput);
 
             featurePhoneList.add(featurePhone);
-            System.out.println("Feature Phone added successfully!\n");
+            System.out.println("Feature Entity.Phone added successfully!\n");
 
             System.out.print("Press 'c' to add another or 'q' to quit: ");
             String userInput = scanner.nextLine();
@@ -44,7 +48,7 @@ public class FeaturePhoneService {
     }
 
     public static void editFeaturePhone() {
-        System.out.print("\nEnter Feature Phone ID to edit: ");
+        System.out.print("\nEnter Feature Entity.Phone ID to edit: ");
         Integer editIDInput = scanner.nextInt();
         if (editIDInput < 0) {
             System.out.println("Invalid ID");
@@ -81,14 +85,14 @@ public class FeaturePhoneService {
     }
     public static void removeItem() {
         //remove phone item by ID
-        System.out.print("\nEnter Feature Phone ID to remove: ");
+        System.out.print("\nEnter Feature Entity.Phone ID to remove: ");
         Integer userInput = scanner.nextInt();
         if (userInput < 0) {
             System.out.println("Invalid ID");
         }
         if(checkIfFeaturePhoneIdExists(userInput)){
             featurePhoneList.removeIf(phone -> phone.getId().equals(userInput));
-            System.out.println("Feature Phone with ID " + userInput + " has been removed.\n");
+            System.out.println("Feature Entity.Phone with ID " + userInput + " has been removed.\n");
         }
         else {
             System.out.println("ID does not exist, Exiting...");
@@ -119,7 +123,7 @@ public class FeaturePhoneService {
 
     public static void showEditFeaturePhoneMenu() {
         System.out.print("""
-                "\\n--- Edit Feature Phone Menu ---"
+                "\\n--- Edit Feature Entity.Phone Menu ---"
                 1- Edit Battery Life
                 2- Exit
                 """);

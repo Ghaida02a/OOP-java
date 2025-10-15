@@ -1,3 +1,5 @@
+package Entity;
+
 public class BaseEntity {
 
     private Integer id;

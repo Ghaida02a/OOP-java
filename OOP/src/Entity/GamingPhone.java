@@ -1,3 +1,5 @@
+package Entity;
+
 public class GamingPhone extends Phone {
     private String gpu;
     private Integer screenRefreshRate;

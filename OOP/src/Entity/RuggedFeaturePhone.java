@@ -1,4 +1,6 @@
-public class RuggedFeaturePhone extends FeaturePhone{
+package Entity;
+
+public class RuggedFeaturePhone extends FeaturePhone {
     private int ipRating;
     private float dropTestHeight; //Height in meters or feet
     private int batteryStandbyDays;

@@ -1,3 +1,5 @@
+package Entity;
+
 public class SmartPhone extends Phone {
     private String operatingSystem;
     private boolean bluetoothAvailable;

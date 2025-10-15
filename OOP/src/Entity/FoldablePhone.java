@@ -1,3 +1,5 @@
+package Entity;
+
 public class FoldablePhone extends SmartPhone {
     private String foldingMechanism; //"Horizontal" or "Vertical".
     private int screenDurabilityFolds; //Number of folds the screen can withstand.

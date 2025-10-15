@@ -1,3 +1,5 @@
+package Entity;
+
 public class FlagshipPhone extends SmartPhone {
     private String processorModel;
     private String biometricSecurity; //"Fingerprint, FaceID"

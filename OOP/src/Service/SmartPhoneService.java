@@ -1,3 +1,7 @@
+package Service;
+
+import Entity.SmartPhone;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,15 +13,15 @@ public class SmartPhoneService {
     public static void addSmartPhone() {
         SmartPhone smartPhone = new SmartPhone();
 
-        System.out.println("\n--- Adding a Smart Phone ---");
+        System.out.println("\n--- Adding a Smart Entity.Phone ---");
 
         boolean exitFlag = true;
         while (exitFlag) {
             // Enter ID of phone
-            System.out.print("Enter Smart Phone ID: ");
+            System.out.print("Enter Smart Entity.Phone ID: ");
             Integer idOfPhone = scanner.nextInt();
             while (idOfPhone < 0 || checkIfSmartPhoneIdExists(idOfPhone)) {
-                System.out.print("Invalid or duplicate ID. Enter a valid Smart Phone ID: ");
+                System.out.print("Invalid or duplicate ID. Enter a valid Smart Entity.Phone ID: ");
                 idOfPhone = scanner.nextInt();
             }
             smartPhone.setId(idOfPhone);
@@ -38,7 +42,7 @@ public class SmartPhoneService {
 
 
             smartPhoneList.add(smartPhone);
-            System.out.println("Smart Phone added successfully!\n");
+            System.out.println("Smart Entity.Phone added successfully!\n");
 
             // Continue or quit
             System.out.print("Press 'c' to add another or 'q' to quit: ");
@@ -52,7 +56,7 @@ public class SmartPhoneService {
     }
 
     public static void editSmartPhone() {
-        System.out.print("\nEnter Smart Phone ID to edit: ");
+        System.out.print("\nEnter Smart Entity.Phone ID to edit: ");
         Integer editIDInput = scanner.nextInt();
         if (editIDInput < 0) {
             System.out.println("Invalid ID");
@@ -94,14 +98,14 @@ public class SmartPhoneService {
     }
     public static void removeItem() {
         //remove phone item by ID
-        System.out.print("\nEnter Smart Phone ID to remove: ");
+        System.out.print("\nEnter Smart Entity.Phone ID to remove: ");
         Integer userInput = scanner.nextInt();
         if (userInput < 0) {
             System.out.println("Invalid ID");
         }
         if(checkIfSmartPhoneIdExists(userInput)){
             smartPhoneList.removeIf(phone -> phone.getId().equals(userInput));
-            System.out.println("Smart Phone with ID " + userInput + " has been removed.\n");
+            System.out.println("Smart Entity.Phone with ID " + userInput + " has been removed.\n");
         }
         else {
             System.out.println("ID does not exist. Exiting...");
@@ -132,7 +136,7 @@ public class SmartPhoneService {
 
     public static void showEditSmartPhoneMenu() {
         System.out.print("""
-                \\n--- Edit Smart Phone Menu ---
+                \\n--- Edit Smart Entity.Phone Menu ---
                 1- Edit Operating System
                 2- Edit Bluetooth connection
                 3- Exit

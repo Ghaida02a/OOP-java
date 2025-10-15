@@ -1,6 +1,8 @@
+package Entity;
+
 public class BasicFeaturePhone extends FeaturePhone {
     private String primaryFunction;
-    private boolean colorScreen;
+    private String colorScreen;
     private boolean fmRadio;
 
     public String getPrimaryFunction() {
@@ -11,11 +13,11 @@ public class BasicFeaturePhone extends FeaturePhone {
         this.primaryFunction = primaryFunction;
     }
 
-    public boolean isColorScreen() {
+    public String getColorScreen() {
         return colorScreen;
     }
 
-    public void setColorScreen(boolean colorScreen) {
+    public void setColorScreen(String colorScreen) {
         this.colorScreen = colorScreen;
     }
 

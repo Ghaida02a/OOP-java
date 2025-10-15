@@ -1,4 +1,6 @@
-public class Phone extends BaseEntity{
+package Entity;
+
+public class Phone extends BaseEntity {
 
     private String name;
     private String brand;

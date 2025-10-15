@@ -1,3 +1,7 @@
+package Service;
+
+import Entity.GamingPhone;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,14 +13,14 @@ public class GamingPhoneService {
     public static void addGamingPhone() {
         GamingPhone gamingPhone = new GamingPhone();
 
-        System.out.println("\n--- Adding a Gaming Phone ---");
+        System.out.println("\n--- Adding a Gaming Entity.Phone ---");
         boolean exitFlag = true;
         while (exitFlag) {
             // Enter ID of phone
-            System.out.print("Enter Gaming Phone ID: ");
+            System.out.print("Enter Gaming Entity.Phone ID: ");
             Integer idOfPhone = scanner.nextInt();
             while (idOfPhone < 0 || checkIfGamingPhoneIdExists(idOfPhone)) {
-                System.out.print("Invalid or duplicate ID. Enter a valid Gaming Phone ID: ");
+                System.out.print("Invalid or duplicate ID. Enter a valid Gaming Entity.Phone ID: ");
                 idOfPhone = scanner.nextInt();
             }
             gamingPhone.setId(idOfPhone);
@@ -41,7 +45,7 @@ public class GamingPhoneService {
             scanner.nextLine();
 
             gamingPhoneList.add(gamingPhone);
-            System.out.println("Gaming Phone added successfully!\n");
+            System.out.println("Gaming Entity.Phone added successfully!\n");
 
             // Continue or quit
             System.out.print("Press 'c' to add another or 'q' to quit: ");
@@ -55,7 +59,7 @@ public class GamingPhoneService {
     }
 
     public static void editGamingPhone() {
-        System.out.print("\nEnter Gaming Phone ID to edit: ");
+        System.out.print("\nEnter Gaming Entity.Phone ID to edit: ");
         Integer editIDInput = scanner.nextInt();
         if (editIDInput < 0) {
             System.out.println("Invalid ID");
@@ -93,20 +97,19 @@ public class GamingPhoneService {
                 }
             }
         }
-
     }
+
     public static void removeItem() {
         //remove phone item by ID
-        System.out.print("Enter Gaming Phone ID to remove: ");
+        System.out.print("Enter Gaming Entity.Phone ID to remove: ");
         Integer userInput = scanner.nextInt();
         if (userInput < 0 && userInput == null) {
             System.out.println("Invalid ID");
         }
-        if(checkIfGamingPhoneIdExists(userInput)){
+        if (checkIfGamingPhoneIdExists(userInput)) {
             gamingPhoneList.removeIf(phone -> phone.getId().equals(userInput));
-            System.out.println("Gaming Phone with ID " + userInput + " has been removed.\n");
-        }
-        else {
+            System.out.println("Gaming Entity.Phone with ID " + userInput + " has been removed.\n");
+        } else {
             System.out.println("ID does not exist, Exiting...");
         }
     }

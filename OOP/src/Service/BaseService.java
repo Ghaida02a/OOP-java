@@ -1,3 +1,7 @@
+package Service;
+
+import Entity.BaseEntity;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
